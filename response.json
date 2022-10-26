@@ -1,0 +1,176 @@
+{
+  "Status": "Success",
+  "Result": {
+    "SharedImageParts": [],
+    "SharedTextParts": [],
+    "PartGroups": [
+      {
+        "Provider": "Remix3D",
+        "Type": "Model3D",
+        "ImageParts": [
+          {
+            "ImageCategory": "Thumbnail",
+            "SourceUrl": "https://cdn.hubblecontent.osi.office.net/models/publish/g009sxj51fsw/thumbnail/bbdf4d056e3d4335b27177d990ddf621.jpg",
+            "Width": 308,
+            "Height": 308,
+            "ContentSize": 0
+          }
+        ],
+        "TextParts": [
+          {
+            "TextCategory": "Title",
+            "Text": "Cow"
+          },
+          {
+            "TextCategory": "HasAnimations",
+            "Text": "False"
+          },
+          {
+            "TextCategory": "SourceLink",
+            "Text": "https://cdn.hubblecontent.osi.office.net/models/publish/g009sxj51fsw/gltf/dc514cc2f8ff4c3bacda86fdc4d01def.fbx.gltf"
+          },
+          {
+            "TextCategory": "OasisGlbLink",
+            "Text": "https://cdn.hubblecontent.osi.office.net/models/publish/g009sxj51fsw/windowsmr/0e98083cf2014d6cbd952e27ad0d64f7.glb"
+          },
+          {
+            "TextCategory": "HoloGlbLink",
+            "Text": "https://cdn.hubblecontent.osi.office.net/models/publish/g009sxj51fsw/hololens/g009sxj51fsw.glb"
+          }
+        ],
+        "VideoParts": [],
+        "AudioParts": [],
+        "BrowseDescriptor": null,
+        "BrowseUrl": null,
+        "Properties": null
+      },
+      {
+        "Provider": "Remix3D",
+        "Type": "Model3D",
+        "ImageParts": [
+          {
+            "ImageCategory": "Thumbnail",
+            "SourceUrl": "https://cdn.hubblecontent.osi.office.net/models/publish/g009stz07llw/thumbnail/0064af121f2043e8b884f63fb1aa3b4c.jpg",
+            "Width": 308,
+            "Height": 308,
+            "ContentSize": 0
+          }
+        ],
+        "TextParts": [
+          {
+            "TextCategory": "Title",
+            "Text": "Grooving cow"
+          },
+          {
+            "TextCategory": "HasAnimations",
+            "Text": "True"
+          },
+          {
+            "TextCategory": "SourceLink",
+            "Text": "https://cdn.hubblecontent.osi.office.net/models/publish/g009stz07llw/gltf/43809f9469da467b8920c83dad622528.fbx.gltf"
+          },
+          {
+            "TextCategory": "OasisGlbLink",
+            "Text": "https://cdn.hubblecontent.osi.office.net/models/publish/g009stz07llw/windowsmr/50634c2b74f445a3853782d64ced90e6.glb"
+          },
+          {
+            "TextCategory": "HoloGlbLink",
+            "Text": "https://cdn.hubblecontent.osi.office.net/models/publish/g009stz07llw/hololens/g009stz07llw.glb"
+          }
+        ],
+        "VideoParts": [],
+        "AudioParts": [],
+        "BrowseDescriptor": null,
+        "BrowseUrl": null,
+        "Properties": null
+      },
+      {
+        "Provider": "Remix3D",
+        "Type": "Model3D",
+        "ImageParts": [
+          {
+            "ImageCategory": "Thumbnail",
+            "SourceUrl": "https://cdn.hubblecontent.osi.office.net/models/publish/g009sx0nck67/thumbnail/f319cbc4dfee46cabddca1a70c95a951.jpg",
+            "Width": 308,
+            "Height": 308,
+            "ContentSize": 0
+          }
+        ],
+        "TextParts": [
+          {
+            "TextCategory": "Title",
+            "Text": "Cow Hoof"
+          },
+          {
+            "TextCategory": "HasAnimations",
+            "Text": "False"
+          },
+          {
+            "TextCategory": "SourceLink",
+            "Text": "https://cdn.hubblecontent.osi.office.net/models/publish/g009sx0nck67/gltf/90ebf5a0b88d47849bc83020393b2b3a.fbx.gltf"
+          },
+          {
+            "TextCategory": "OasisGlbLink",
+            "Text": "https://cdn.hubblecontent.osi.office.net/models/publish/g009sx0nck67/windowsmr/f2a896abe1654f748a93ce83a75bfd44.glb"
+          },
+          {
+            "TextCategory": "HoloGlbLink",
+            "Text": "https://cdn.hubblecontent.osi.office.net/models/publish/g009sx0nck67/hololens/g009sx0nck67.glb"
+          }
+        ],
+        "VideoParts": [],
+        "AudioParts": [],
+        "BrowseDescriptor": null,
+        "BrowseUrl": null,
+        "Properties": null
+      },
+      {
+        "Provider": "Remix3D",
+        "Type": "Model3D",
+        "ImageParts": [
+          {
+            "ImageCategory": "Thumbnail",
+            "SourceUrl": "https://cdn.hubblecontent.osi.office.net/models/publish/g009sx0mxzl7/thumbnail/220e8529eb1f41e0bac9f18dc8a001f8.jpg",
+            "Width": 308,
+            "Height": 308,
+            "ContentSize": 0
+          }
+        ],
+        "TextParts": [
+          {
+            "TextCategory": "Title",
+            "Text": "Cow Skull"
+          },
+          {
+            "TextCategory": "HasAnimations",
+            "Text": "False"
+          },
+          {
+            "TextCategory": "SourceLink",
+            "Text": "https://cdn.hubblecontent.osi.office.net/models/publish/g009sx0mxzl7/gltf/fa41ba2c894d449093402e2fb387ec98.fbx.gltf"
+          },
+          {
+            "TextCategory": "OasisGlbLink",
+            "Text": "https://cdn.hubblecontent.osi.office.net/models/publish/g009sx0mxzl7/windowsmr/03dce3b0ab2d401ab887babb6773e04d.glb"
+          },
+          {
+            "TextCategory": "HoloGlbLink",
+            "Text": "https://cdn.hubblecontent.osi.office.net/models/publish/g009sx0mxzl7/hololens/g009sx0mxzl7.glb"
+          }
+        ],
+        "VideoParts": [],
+        "AudioParts": [],
+        "BrowseDescriptor": null,
+        "BrowseUrl": null,
+        "Properties": null
+      }
+    ],
+    "NextDescriptor": null,
+    "NextUrl": null
+  },
+  "Error": null,
+  "Diagnostic": {
+    "TraceId": "e36e5581-f81e-4046-af77-8caf12a30568",
+    "ExceptionCallStack": null
+  }
+}
