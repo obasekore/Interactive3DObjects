@@ -1,0 +1,80 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <body> -->
+    <!-- {left pane}|{right pane} -->
+
+    <!-- Page Layout here -->
+
+<div class="app">
+    <div class="row">
+<div class="col s12">
+
+</div>
+      <div class="col s3" style="max-height:90%; overflow-y: scroll;">
+        <!-- Grey navigation panel -->
+        <? 
+        result = response.Result.PartGroups;
+        if(response.Status == "Success")
+        {
+        for(i=0;i<result.length;i++)
+        {
+          ?>
+          <a onclick="loadModel2('<?= result[i].TextParts[2].Text ?>','<?= result[i].TextParts[0].Text ?>')">
+            <div class="row">
+              <div class="col s12 m7">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="<?= result[i].ImageParts[0].SourceUrl ?>" >
+                    <!-- <span class="card-title"><?= result[i].TextParts[0].Text ?></span> -->
+                  </div>
+                  <div class="card-content">
+                    <p><?= result[i].TextParts[0].Text ?></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        <?
+        }
+        }
+        ?>
+
+      </div>
+
+      <div class="col s9" >
+        <h1 class="center-align" id="title"><?= result[0].TextParts[0].Text ?></h1>
+        <!-- Use it like any other HTML element -->
+        <model-viewer id="model3D"
+          alt="<?= result[0].TextParts[0].Text ?>"
+          src="<?= result[0].TextParts[2].Text ?>"
+          shadow-intensity="1"
+          camera-controls
+          touch-action="pan-y"
+          style="height:80vh; width: 80vw"
+          
+        ></model-viewer>        
+      </div>
+      <div class="col s12">
+        <ul class="pagination">
+          <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+          <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+        </ul>
+      </div>
+    </div>
+
+    </div>
+    <!--left: List the small flash-card with name of 3D object and ThumbnailImage -->
+    <!-- pagination at the top and bottom -->
+
+    <!-- right: 3D object and the name at the top -->
+
+<!-- 
+  </body>
+</html> -->
