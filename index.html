@@ -1,39 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <!-- Import the component -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-      $(document).ready(function () {
-        var settings = {
-          url: "https://hubblecontent.osi.office.net/contentsvc/api/contenthost/channel?cp=Remix3D&setLang=en-US&app=microsoft.3dbuilder",
-          method: "GET",
-          timeout: 0,
-          headers: {
-            "Content-Type": "application/json",
-          },
-          data: JSON.stringify({
-            type: "FirstPartyChannel",
-            app: "microsoft.3dbuilder",
-            provider: "Remix3D",
-          }),
-        };
+    <base target="_top">
+  </head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kids3DInteract</title>
+  <body style="overflow: hidden; height: 90vh; width: 100%">
+    <div class="container">
+  <div class="center-align" ><a class="btn-floating btn-large waves-effect waves-light red" id="home" onclick="https://script.google.com/macros/s/AKfycbzJKjkRydDlFUVUod7Ti-6GsT2YNChCpVhB7juHRtDE/dev"><i class="material-icons">home</i></a> </div>
+    <div id="app">
+      <div class="row">
+        <div class="col s12">
+          <div class="carousel">
+         <? 
+          for(i=0;i<data.Categories.length;i++)
+          {
+            ?>
+            <a class="carousel-item" onclick="loadModel('<?= data.Categories[i].Name ?>')" href="#<?= i ?>!"><img src="https://cdn.hubblecontent.osi.office.net/models/publish/86a3eb84bdb24eae9459d204930089fd/thumbnail/92f8f80abdbb440da9fb934482c59fb8.jpg" ></a>
+          <?
+          }
+          ?>
+          </div>
 
-        $.ajax(settings).done(function (response) {
-          console.log(response);
-        });
-      });
-    </script>
+        </div>
+      </div>
+
+  </div>
+    </div>
+        <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Import the component -->
     <script
       type="module"
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
     ></script>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3D viewer</title>
-  </head>
-  <body>
-    <div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.carousel');
+        options = {};
+        var instances = M.Carousel.init(elems, options);
+      });
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.carousel2');
+        options = {};
+        var instances = M.Carousel.init(elems, options);
+      });
+
+    function loadModel(q)
+    {
+          google.script.run.withSuccessHandler(function(resp){
+
+              document.getElementById("app").innerHTML = resp;
+
+          }).getObject(q);
+    }
+
+    function loadModel2(url, title)
+    {
+      model_src = document.getElementById("model3D").src = url;
+      model_title = document.getElementById("title").innerHTML = title;
+    }
+  </script>
   </body>
 </html>
