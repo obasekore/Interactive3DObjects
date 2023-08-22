@@ -1,70 +1,148 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <base target="_top">
+    <base target="_top" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
   </head>
   <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+  />
   <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+  />
   <!--Let browser know website is optimized for mobile-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kids3DInteract</title>
   <body style="overflow: hidden; height: 90vh; width: 100%">
     <div class="container">
-  <div class="center-align" ><a class="btn-floating btn-large waves-effect waves-light red" id="home" onclick="https://script.google.com/macros/s/AKfycbzJKjkRydDlFUVUod7Ti-6GsT2YNChCpVhB7juHRtDE/dev"><i class="material-icons">home</i></a> </div>
-    <div id="app">
-      <div class="row">
-        <div class="col s12">
-          <div class="carousel">
-         <? 
+      <div class="center-align">
+        <a
+          class="btn-floating btn-large waves-effect waves-light red"
+          id="home"
+          onclick="https://script.google.com/macros/s/AKfycbzJKjkRydDlFUVUod7Ti-6GsT2YNChCpVhB7juHRtDE/dev"
+          ><i class="material-icons">home</i></a
+        >
+      </div>
+      <div id="app">
+        <div class="row">
+          <div class="col s12">
+            <div class="carousel" id="img-item">
+              <!-- <? 
           for(i=0;i<data.Categories.length;i++)
           {
             ?>
-            <a class="carousel-item" onclick="loadModel('<?= data.Categories[i].Name ?>')" href="#<?= i ?>!"><img src="https://cdn.hubblecontent.osi.office.net/models/publish/86a3eb84bdb24eae9459d204930089fd/thumbnail/92f8f80abdbb440da9fb934482c59fb8.jpg" ></a>
-          <?
+              <a
+                class="carousel-item"
+                onclick="loadModel('<?= data.Categories[i].Name ?>')"
+                href="#<?= i ?>!"
+                ><img
+                  src="https://cdn.hubblecontent.osi.office.net/models/publish/86a3eb84bdb24eae9459d204930089fd/thumbnail/92f8f80abdbb440da9fb934482c59fb8.jpg"
+              /></a>
+              <?
           }
-          ?>
+          ?> -->
+              https://encoding.assets.remix3d.com:443/003/00000009000000008065786200000000/001/08586745859741022228236775932/746203b1ef52491786479bdf2310bd14?w=308&h=308&format=jpg
+            </div>
           </div>
-
         </div>
       </div>
-
-  </div>
     </div>
-        <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
     <!-- Import the component -->
+
     <script
       type="module"
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
     ></script>
+
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.carousel');
-        options = {};
-        var instances = M.Carousel.init(elems, options);
+      var url_home =
+        "https://hubblecontent.osi.office.net/contentsvc/api/contenthost/channel?cp=Remix3D&setLang=en-US&app=microsoft.3dbuilder";
+      var params = "";
+      var options = {
+        method: "get",
+        contentType: "application/json",
+        // Convert the JavaScript object to a JSON string.
+        // 'payload' : JSON.stringify(data),
+        muteHttpExceptions: true,
+      };
+      $(document).ready(function () {
+        var settings = {
+          url: "https://hubblecontent.osi.office.net/contentsvc/api/contenthost/channel?cp=Remix3D&setLang=en-US&app=microsoft.3dbuilder",
+          method: "GET",
+          timeout: 0,
+          headers: {
+            "Cache-Control": "no-cache",
+            Accept: "*/*",
+            "Accept-Encoding": "gzip, deflate",
+            Connection: "keep-alive",
+          },
+          data: '{\r\n  "method" : "get",\r\n  "contentType": "application/json",\r\n\r\n  "muteHttpExceptions": true\r\n  }',
+        };
+        $.ajax(settings).done(function (response) {
+          console.log(response);
+        });
+        // $.get(url_home, function (data, status) {
+        //   alert("Data: " + data + "\nStatus: " + status);
+        // });
       });
-      document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.carousel2');
-        options = {};
-        var instances = M.Carousel.init(elems, options);
-      });
+      // window.onload = function () {
+      //   // function loadHome() {
+      //   var xhr = new XMLHttpRequest();
+      //   xhr.open("GET", url_home + params, true);
+      //   console.log("Home...");
+      //   xhr.onreadystatechange = function () {
+      //     if (xhr.readyState === 4 && xhr.status === 200) {
+      //       // Handle the response from the backend, if needed
+      //       d = JSON.parse(xhr.responseText);
+      //       // genes = d;//.percent;
+      //       console.log(d);
+      //       template = `<a class="carousel-item" onclick="loadModel('<?= data.Categories[i].Name ?>')" href="#<?= i ?>!"><img src="https://cdn.hubblecontent.osi.office.net/models/publish/86a3eb84bdb24eae9459d204930089fd/thumbnail/92f8f80abdbb440da9fb934482c59fb8.jpg" ></a>`;
+      //       document.getElementById("img-item").innerHTML = d;
 
-    function loadModel(q)
-    {
-          google.script.run.withSuccessHandler(function(resp){
+      //       // for (var i = 0; i < genes.length; i++) {
+      //       //   gene = genes[i];
 
-              document.getElementById("app").innerHTML = resp;
+      //       //   img = document.getElementById("img_gene_" + i);
+      //       //   src = "static/scene/gene_" + i + ".png";
+      //       //   img.src = src;
+      //       // }
+      //     }
+      //     xhr.send();
+      //   };
+      // };
+      // };
+    </script>
 
-          }).getObject(q);
-    }
+    <script>
+      // document.addEventListener("DOMContentLoaded", function () {
+      //   var elems = document.querySelectorAll(".carousel");
+      //   options = {};
+      //   var instances = M.Carousel.init(elems, options);
+      // });
+      // document.addEventListener("DOMContentLoaded", function () {
+      //   var elems = document.querySelectorAll(".carousel2");
+      //   options = {};
+      //   var instances = M.Carousel.init(elems, options);
+      // });
 
-    function loadModel2(url, title)
-    {
-      model_src = document.getElementById("model3D").src = url;
-      model_title = document.getElementById("title").innerHTML = title;
-    }
-  </script>
+      function loadModel(q) {
+        google.script.run
+          .withSuccessHandler(function (resp) {
+            document.getElementById("app").innerHTML = resp;
+          })
+          .getObject(q);
+      }
+
+      function loadModel2(url, title) {
+        model_src = document.getElementById("model3D").src = url;
+        model_title = document.getElementById("title").innerHTML = title;
+      }
+    </script>
   </body>
 </html>
