@@ -62,27 +62,17 @@
 
     <script>
       var url_home =
-        "https://hubblecontent.osi.office.net/contentsvc/api/contenthost/channel?cp=Remix3D&setLang=en-US&app=microsoft.3dbuilder";
-      var params = "";
-      var options = {
-        method: "get",
-        contentType: "application/json",
-        // Convert the JavaScript object to a JSON string.
-        // 'payload' : JSON.stringify(data),
-        muteHttpExceptions: true,
-      };
+        "https://apis.hobas.me/";
+    
       $(document).ready(function () {
         var settings = {
-          url: "https://hubblecontent.osi.office.net/contentsvc/api/contenthost/channel?cp=Remix3D&setLang=en-US&app=microsoft.3dbuilder",
+          url: "https://apis.hobas.me/",
           method: "GET",
           timeout: 0,
           headers: {
             "Cache-Control": "no-cache",
-            Accept: "*/*",
-            "Accept-Encoding": "gzip, deflate",
-            Connection: "keep-alive",
+            Accept: "*/*",          
           },
-          data: '{\r\n  "method" : "get",\r\n  "contentType": "application/json",\r\n\r\n  "muteHttpExceptions": true\r\n  }',
         };
         $.ajax(settings).done(function (response) {
           console.log(response);
